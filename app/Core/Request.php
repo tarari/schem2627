@@ -16,5 +16,10 @@ class Request
         $this->get = $_GET ??[];
         $this->post = $_POST ??[];
     }
-
+    function getUri(){
+        return $this->requestUri;
+    }
+    function getMethod(){
+        return $this->method;
+    }
 }

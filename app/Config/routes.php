@@ -1,10 +1,12 @@
 <?php
 
+use App\Controllers\HomeController;
+
+return
     [
-        'GET' => [
-            '/' => 'App\Controllers\HomeController@index',
-            '/home' => 'App\Controllers\HomeController@index',
-            '/about' => 'App\Controllers\AboutController@index',
-            '/contact' => 'App\Controllers\ContactController@index',
-        ],        
+        ['path'=>'/',
+        'method'=>'GET',
+        'handler'=>[HomeController::class,'index']
+        ],
+
     ];
